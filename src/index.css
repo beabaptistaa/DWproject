@@ -1,0 +1,568 @@
+@font-face {
+  font-family: "Compagnon";
+  src: url('../fonts/Compagnon-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Porpora";
+  src: url('../fonts/Porpora-Regular.woff') format('woff');
+}
+
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+
+  --nav-font: "Compagnon";
+  --text-font: "Porpora";
+
+  --back-color: #F8F1E6;
+
+  --text-color: #black;
+  --hover-color: #FFFFFF;
+
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+body {
+  font-family: var(--text-font);
+  font-size: small;
+  background-color: var(--back-color);
+  font-size: 1rem;
+}
+
+nav ul li {
+  font-family: var(--nav-font);
+  font-size: 1.5rem;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Grid starts */
+.grid-container {
+  display: grid;
+  grid-template-columns: 17rem 17rem; 
+  grid-template-rows: 20rem; 
+  grid-gap: 2rem;
+
+  /* centra na horizontal */
+  justify-content: center;
+
+  /* centra na vertical */
+  align-content: center;
+  height: 100vh;
+}
+
+.grid-item {
+  background-color: var(--back-color);
+  border: solid;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem black;
+  /*padding: 2.0rem 1.5rem;*/
+  text-align: center;
+  transition-duration: 0.1s;
+}
+
+.grid-item:hover {
+  box-shadow: none;
+  transform: translate(0.3rem, 0.3rem);
+}
+
+.grid-item h1{
+  padding: 0.5rem;
+  border-bottom: solid;
+}
+
+.grid-item p{
+  padding: 2.0rem 1.5rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Grid ends*/
+
+/* Navbar starts */  
+nav {
+  background-color: var(--back-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 4rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 3rem;
+}
+
+nav li:nth-child(n+2):hover{
+  box-shadow: inset 100px 0 0 0 lightblue;
+}
+
+.search-container{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  height: 2rem;
+  
+}
+
+.search-container img{
+  width: auto;
+  padding: 0.4rem 0.4rem;
+  border-top:    1px solid black;
+  border-left:  1px solid black; 
+  border-bottom: 1px solid black;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.search-input{
+  background-color: var(--back-color);
+  padding-left: 0.4rem;
+  border: 1px solid black;
+  width: 14rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+
+/* Navbar ends */
+
+/* Vida section starts */
+.vida-container{
+  display: table;
+  font-size: 20px;
+  padding: 1rem 15rem; 
+  width: 100%;
+}
+
+.vida-container h1{
+  margin-bottom: 1.5rem;
+}
+
+.vida-container h2{
+  margin-bottom: 1.5rem;
+}
+
+.vida-container p{
+  padding: 0rem 2rem;
+}
+
+.intro-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 4rem;
+}
+
+.gif-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+  z-index: -1;
+}
+
+.gif-infancia{
+  width: 95%;
+}
+
+.cc-container{
+  margin-top: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem;
+  /*
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+}
+
+#cc1{
+  width: 50vw;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 10rem;
+
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+#cc2{
+  width: 50vw;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 10rem;
+
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+#cc3{
+  width: 50vw;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 10rem;
+
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+#cc4{
+  width: 50vw;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 10rem;
+
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+.text-container{
+  margin-top: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vida section ends */
+
+/* Sobre section starts */
+.sobre-container{
+  display: grid;
+  padding: 1rem 5rem;
+  align-items: center;
+}
+
+.sobre-text{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 4rem;
+}
+
+.sobre-text h1{
+  margin-bottom: 1.5rem;
+}
+
+.sobre-text p{
+  padding: 0rem 2rem;
+}
+
+.equipa-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+
+.equipa-container h1{
+  position: sticky;
+  top: 10rem;
+}
+
+#duda{
+  width: 30vw;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 13rem;
+  left:15rem;
+}
+
+#bea{
+  width: 30vw;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 20rem;
+  left: 238rem;
+}
+/* Sobre section ends */
+
+
+/* Obras section starts---------------- */
+.obras-container{
+  display: grid;
+  grid-template-columns: 20% 80%; 
+
+  /* centra na horizontal */
+  justify-content: start;
+
+}
+
+.menu{
+  margin-top: 5rem;
+  padding: 2rem 2rem;
+  line-height: 2rem;
+  position: sticky;
+  top: 12rem;
+}
+
+.menu a{
+  text-decoration: underline;
+}
+
+.menu a:hover{
+  box-shadow: inset 200px 0 0 0 pink;
+}
+
+.poemas-container{
+  display: grid;
+  grid-template-columns: 20% 80%; 
+  border-bottom: 1px solid black;
+}
+
+.left-autor{
+ padding: 2rem 2rem;
+}
+
+.right-poemas{
+  width: 30rem;
+  height: 18rem;
+}
+
+/* carousel */
+
+.div{
+
+  border-bottom: 2.0px solid black;
+}
+
+.carousel-wrap {
+  /* margin: 1rem 1rem; */
+  text-align: center;
+  padding: 0rem 0.5rem;
+  /* width: 95%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden; */
+}
+
+.carousel-wrap li img{
+  width: 14rem;
+  padding: 0rem 0.5rem;
+  position: relative
+}
+
+.carousel-wrap li{
+  list-style: none;
+  background-color: pink;
+  border: solid;
+  padding: 0.5rem 5rem;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.owl-carousel{
+  display: inline-grid;
+  justify-content: center;
+  margin: auto;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.list{
+  float: left;
+  max-width: 68px;
+}
+
+.poema_titulo{
+  width: 15rem;
+  max-width: 75%;
+  background-color: pink;
+  border: solid;
+  margin: 5px;
+  font-size: medium;
+  padding: 0.5rem 1rem;/*
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);*/
+}
+
+.livros_container{
+  padding: 2rem;
+}
+
+.left-autor{
+  text-align: center;
+  width: 10rem;
+  height: fit-content;
+}
+.author-caption{
+  margin-top: 5px;
+  display: block;
+}
+.logo{
+  width: 100%;
+}
+/* -- Obras section ends -- */
+
+/* -- Poema section starts -- */
+ul.breadcrumb {
+padding: 10px 70px;
+list-style: none;
+}
+ul.breadcrumb li {
+display: inline;
+font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+padding: 8px;
+color: black;
+content: "/\00a0";
+}
+ul.breadcrumb li a {
+text-decoration: underline;
+}
+ul.breadcrumb li a:hover {
+text-decoration: underline;
+}
+
+.poema-container{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 17rem 17rem; 
+  grid-gap: 2rem;
+
+  /* centra na horizontal */
+  justify-content: center;
+
+  /* centra na vertical */
+  align-content: center;
+  height: 100%;
+
+  
+}
+
+.poema{
+  /*padding: 2.0rem 1.5rem;*/
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+}
+
+.poema h1{
+  padding: 0.5rem;
+}
+
+.p{
+  padding: 2.0rem 1.5rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poema a{
+  text-decoration: underline;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.poema a:hover{
+  box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+.poema:hover + .analise{
+  display: block;
+}
+
+.analise{
+  display: none;
+  border: solid;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem black;
+}
+
+.analise p{
+  padding: 2.0rem 1.5rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analise{
+display: none;
+border: solid;
+border-radius: 10px;
+box-shadow: 0.5rem 0.5rem black;
+}
+
+.analise p{
+padding: 2.0rem 1.5rem;
+height: 16rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/* Poema section ends */
